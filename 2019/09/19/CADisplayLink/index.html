@@ -10,20 +10,20 @@
 <title>CADisplayLink简介 - Garen的开发笔记</title>
 
 
-    <meta name="description" content="CADisplayLinkCADisplayLink是与屏幕刷新频率相同的一个定时器,通常用来绘图,使自定义绘图的刷新频率和屏幕的刷新频率相同(60帧的刷新频率) 接口和属性1.接口1+ (CADisplayLink *)displayLinkWithTarget:(id)target selector:(SEL)sel;  生成一个display link 实例,制定target和调用方法,方法">
-<meta name="keywords" content="iOS OC">
+    <meta name="description" content="CADisplayLink是与屏幕刷新频率相同的一个定时器,通常用来绘图,使自定义绘图的刷新频率和屏幕的刷新频率相同(60帧的刷新频率)">
+<meta name="keywords" content="iOS,CoreAnimation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CADisplayLink简介">
-<meta property="og:url" content="http://yoursite.com/2019/09/19/CADisplayLink/index.html">
+<meta property="og:url" content="https://garenchen.github.io/2019/09/19/CADisplayLink/index.html">
 <meta property="og:site_name" content="Garen的开发笔记">
-<meta property="og:description" content="CADisplayLinkCADisplayLink是与屏幕刷新频率相同的一个定时器,通常用来绘图,使自定义绘图的刷新频率和屏幕的刷新频率相同(60帧的刷新频率) 接口和属性1.接口1+ (CADisplayLink *)displayLinkWithTarget:(id)target selector:(SEL)sel;  生成一个display link 实例,制定target和调用方法,方法">
+<meta property="og:description" content="CADisplayLink是与屏幕刷新频率相同的一个定时器,通常用来绘图,使自定义绘图的刷新频率和屏幕的刷新频率相同(60帧的刷新频率)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-09-22T01:58:02.691Z">
+<meta property="og:image" content="https://garenchen.github.io/images/og_image.png">
+<meta property="og:updated_time" content="2019-09-22T06:11:19.094Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CADisplayLink简介">
-<meta name="twitter:description" content="CADisplayLinkCADisplayLink是与屏幕刷新频率相同的一个定时器,通常用来绘图,使自定义绘图的刷新频率和屏幕的刷新频率相同(60帧的刷新频率) 接口和属性1.接口1+ (CADisplayLink *)displayLinkWithTarget:(id)target selector:(SEL)sel;  生成一个display link 实例,制定target和调用方法,方法">
-<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+<meta name="twitter:description" content="CADisplayLink是与屏幕刷新频率相同的一个定时器,通常用来绘图,使自定义绘图的刷新频率和屏幕的刷新频率相同(60帧的刷新频率)">
+<meta name="twitter:image" content="https://garenchen.github.io/images/og_image.png">
 
 
 
@@ -87,7 +87,8 @@
 
 <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="is-2-column">
+<!-- <body class="is-2-column"> -->
+<body class="is-3-column">
     <nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
@@ -113,15 +114,12 @@
                 <a class="navbar-item"
                 href="/tags">标签</a>
                 
-                <a class="navbar-item"
-                href="/about">关于</a>
-                
             </div>
             
             <div class="navbar-end">
                 
                 
-                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catálogo" href="javascript:;">
                     <i class="fas fa-list-ul"></i>
                 </a>
                 
@@ -138,7 +136,7 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main"><div class="card">
     
     <div class="card-content article ">
         <!-- <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
@@ -152,7 +150,7 @@
                 <!-- <time class="level-item has-text-grey" datetime="2019-09-19T12:27:04.452Z">2019-09-19</time> -->
                 <time class="level-item has-text-grey" datetime="2019-09-19T12:27:04.452Z"><i class="far fa-calendar-alt">&nbsp;</i>2019-09-19</time>
                 
-                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-09-22T01:58:02.691Z"><i class="far fa-calendar-check">&nbsp;</i>2019-09-22</time>
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-09-22T06:11:19.094Z"><i class="far fa-calendar-check">&nbsp;</i>2019-09-22</time>
                 
                 
                 <div class="level-item">
@@ -170,7 +168,9 @@
             
         </h1>
         <div class="content">
-            <h2 id="CADisplayLink"><a href="#CADisplayLink" class="headerlink" title="CADisplayLink"></a>CADisplayLink</h2><p>CADisplayLink是与屏幕刷新频率相同的一个定时器,通常用来绘图,使自定义绘图的刷新频率和屏幕的刷新频率相同(60帧的刷新频率)</p>
+            <p>CADisplayLink是与屏幕刷新频率相同的一个定时器,通常用来绘图,使自定义绘图的刷新频率和屏幕的刷新频率相同(60帧的刷新频率)</p>
+<a id="more"></a>
+
 <h2 id="接口和属性"><a href="#接口和属性" class="headerlink" title="接口和属性"></a>接口和属性</h2><h4 id="1-接口"><a href="#1-接口" class="headerlink" title="1.接口"></a>1.接口</h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ (CADisplayLink *)displayLinkWithTarget:(id)target selector:(SEL)sel;</span><br></pre></td></tr></table></figure>
 
 <p>生成一个display link 实例,制定target和调用方法,方法签名为<code>&#39;(void)selector:(CADisplayLink *)sender&#39;</code></p>
@@ -202,9 +202,9 @@
         </div>
         
             <ul class="post-copyright">
-            <li>作者：Garen</li>
-            <li>链接：<a href="http://yoursite.com/2019/09/19/CADisplayLink/">http://yoursite.com/2019/09/19/CADisplayLink/</a></li>
-            <li>发布于：2019-09-19, 转载请注明出处</li>
+            <li>原文链接：<a href="https://garenchen.github.io/2019/09/19/CADisplayLink/">https://garenchen.github.io/2019/09/19/CADisplayLink/</a></li>
+            <li>Garen 发布于：2019-09-19, 转载请注明出处</li>
+            <!-- <li>发布于：2019-09-19, 转载请注明出处</li> -->
             </ul>
         
         
@@ -214,7 +214,7 @@
                 <div class="level-item">
                     <!-- <span class="is-size-6 has-text-grey has-mr-7">#</span> -->
                     <i class="fas fa-tags has-text-grey"></i>&nbsp;
-                    <a class="has-link-grey -link" href="/tags/iOS-OC/">iOS OC</a>
+                    <a class="has-link-grey -link" href="/tags/CoreAnimation/">CoreAnimation</a>, <a class="has-link-grey -link" href="/tags/iOS/">iOS</a>
                 </div>
             </div>
         </div>
@@ -262,27 +262,6 @@
 
 
 
-<div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/19/CADisplayLink的副本 3/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">CADisplayLink简介</span>
-            </a>
-        </div>
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/19/CADisplayLink的副本 4/">
-                <span class="level-item">CADisplayLink简介</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
-        
-    </div>
-</div>
-
 
 
 </div>
@@ -326,17 +305,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Posts
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        14
-                    </p>
-                </div>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <div>
-                    <p class="heading">
-                        Category
+                        Entrada
                     </p>
                     <p class="title has-text-weight-normal">
                         1
@@ -346,17 +315,27 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tags
+                        Categoria
                     </p>
                     <p class="title has-text-weight-normal">
-                        4
+                        1
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Etiquetas
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        2
                     </p>
                 </div>
             </div>
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="https://github.com/GarenChen" target="_blank">
-                Follow</a>
+                SEGUIR</a>
         </div>
         
         
@@ -388,27 +367,23 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Catalogue
+                Catálogo
             </h3>
             <ul class="menu-list"><li>
-        <a class="is-flex" href="#CADisplayLink">
-        <span class="has-mr-6">1</span>
-        <span>CADisplayLink</span>
-        </a></li><li>
         <a class="is-flex" href="#接口和属性">
-        <span class="has-mr-6">2</span>
+        <span class="has-mr-6">1</span>
         <span>接口和属性</span>
         </a><ul class="menu-list"><li>
         <a class="is-flex" href="#1-接口">
-        <span class="has-mr-6">2.1</span>
+        <span class="has-mr-6">1.1</span>
         <span>1.接口</span>
         </a></li><li>
         <a class="is-flex" href="#2-属性">
-        <span class="has-mr-6">2.2</span>
+        <span class="has-mr-6">1.2</span>
         <span>2.属性</span>
         </a></li></ul></li><li>
         <a class="is-flex" href="#注意">
-        <span class="has-mr-6">3</span>
+        <span class="has-mr-6">2</span>
         <span>注意</span>
         </a></li></ul>
         </div>
@@ -418,7 +393,7 @@
 
     
     
-        <div class="column-right-shadow is-hidden-widescreen is-sticky">
+        <div class="column-right-shadow is-hidden-widescreen ">
         
         </div>
     
@@ -572,10 +547,10 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
+                POSTS: 'Entradas',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
+                CATEGORIES: 'Categorias',
+                TAGS: 'Etiquetas',
                 UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',
