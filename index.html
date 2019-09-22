@@ -10,15 +10,18 @@
 <title>Garen的开发笔记</title>
 
 
-    <meta name="keywords" content="iOS Objectice-C swift Pyhton c&#x2F;c++">
+    <meta name="description" content="记录工作生活的点滴">
+<meta name="keywords" content="iOS Objectice-C swift Pyhton c&#x2F;c++">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Garen的开发笔记">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Garen的开发笔记">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:description" content="记录工作生活的点滴">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Garen的开发笔记">
+<meta name="twitter:description" content="记录工作生活的点滴">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -118,7 +121,7 @@
                 
                 
                 
-                <a class="navbar-item search" title="搜索" href="javascript:;">
+                <a class="navbar-item search" title="Search" href="javascript:;">
                     <i class="fas fa-search"></i>
                 </a>
                 
@@ -151,7 +154,7 @@
         </h1>
         <div class="content">
             <h2 id="CADisplayLink"><a href="#CADisplayLink" class="headerlink" title="CADisplayLink"></a>CADisplayLink</h2><p>CADisplayLink是与屏幕刷新频率相同的一个定时器,通常用来绘图,使自定义绘图的刷新频率和屏幕的刷新频率相同(60帧的刷新频率)</p>
-<h2 id="接口和属性"><a href="#接口和属性" class="headerlink" title="接口和属性"></a>接口和属性</h2><h1 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h1><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ (CADisplayLink *)displayLinkWithTarget:(id)target selector:(SEL)sel;</span><br></pre></td></tr></table></figure>
+<h2 id="接口和属性"><a href="#接口和属性" class="headerlink" title="接口和属性"></a>接口和属性</h2><h5 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h5><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ (CADisplayLink *)displayLinkWithTarget:(id)target selector:(SEL)sel;</span><br></pre></td></tr></table></figure>
 
 <p>生成一个display link 实例,制定target和调用方法,方法签名为<code>&#39;(void)selector:(CADisplayLink *)sender&#39;</code></p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (void)addToRunLoop:(NSRunLoop *)runloop forMode:(NSRunLoopMode)mode;</span><br></pre></td></tr></table></figure>
@@ -160,8 +163,7 @@
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (void)invalidate;</span><br></pre></td></tr></table></figure>
 
 <p>将display link从所有的runloop中移除,并释放</p>
-<p>#####属性</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@property(readonly, nonatomic) CFTimeInterval duration;</span><br></pre></td></tr></table></figure>
+<h5 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h5><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@property(readonly, nonatomic) CFTimeInterval duration;</span><br></pre></td></tr></table></figure>
 
 <p>两次刷新之间的时间间隔</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@property(readonly, nonatomic) CFTimeInterval timestamp</span><br></pre></td></tr></table></figure>
@@ -176,7 +178,7 @@
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@property(getter=isPaused, nonatomic) BOOL paused;</span><br></pre></td></tr></table></figure>
 
 <p>为true时,当前实例禁止触发,默认为false</p>
-<p>##注意<br><code>duration</code>属性返回的时间间隔是根据<code>maximumFramesPerSecond</code>属性得来的,如果要计算实际的时间间隔,用<code>timestamp - targetTimestamp</code>得出    </p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p><code>duration</code>属性返回的时间间隔是根据<code>maximumFramesPerSecond</code>属性得来的,如果要计算实际的时间间隔,用<code>timestamp - targetTimestamp</code>得出    </p>
 <p>当程序暂时不需要相应display link实例的事件回调时,可以通过将<code>pause</code>设置为false或true来暂停和启用display link实例        </p>
 <p>CADisplayLink不应该被子类化</p>
 
@@ -235,7 +237,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        文章
+                        Entrada
                     </p>
                     <p class="title has-text-weight-normal">
                         1
@@ -245,7 +247,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        分类
+                        Categorias
                     </p>
                     <p class="title has-text-weight-normal">
                         0
@@ -255,7 +257,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        标签
+                        Etiquetas
                     </p>
                     <p class="title has-text-weight-normal">
                         0
@@ -265,7 +267,7 @@
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="https://github.com/GarenChen" target="_blank">
-                关注我</a>
+                SEGUIR</a>
         </div>
         
         
@@ -295,7 +297,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                分类
+                Categorias
             </h3>
             <ul class="menu-list">
             
@@ -310,7 +312,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            最新文章
+            Recientes
         </h3>
         
         <article class="media">
@@ -340,14 +342,14 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            归档
+            Archivos
         </h3>
         <ul class="menu-list">
         
         <li>
             <a class="level is-marginless" href="/archives/2019/09/">
                 <span class="level-start">
-                    <span class="level-item">九月 2019</span>
+                    <span class="level-item">September 2019</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">1</span>
@@ -364,7 +366,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                标签
+                Etiquetas
             </h3>
             <div class="field is-grouped is-grouped-multiline">
                 
@@ -500,7 +502,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
 
-<a id="back-to-top" title="回到顶端" href="javascript:;">
+<a id="back-to-top" title="Kembali ke atas" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
@@ -527,7 +529,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="searchbox ins-search">
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么..." />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -539,11 +541,11 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: '文章',
-                PAGES: '页面',
-                CATEGORIES: '分类',
-                TAGS: '标签',
-                UNTITLED: '(无标题)',
+                POSTS: 'Entradas',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categorias',
+                TAGS: 'Etiquetas',
+                UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',
         };
