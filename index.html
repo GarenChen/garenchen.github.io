@@ -150,11 +150,8 @@
             
         </h1>
         <div class="content">
-            <p>##CADisplayLink</p>
-<p>CADisplayLink是与屏幕刷新频率相同的一个定时器,通常用来绘图,使自定义绘图的刷新频率和屏幕的刷新频率相同(60帧的刷新频率)</p>
-<p>##接口和属性</p>
-<p>#####接口</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ (CADisplayLink *)displayLinkWithTarget:(id)target selector:(SEL)sel;</span><br></pre></td></tr></table></figure>
+            <h2 id="CADisplayLink"><a href="#CADisplayLink" class="headerlink" title="CADisplayLink"></a>CADisplayLink</h2><p>CADisplayLink是与屏幕刷新频率相同的一个定时器,通常用来绘图,使自定义绘图的刷新频率和屏幕的刷新频率相同(60帧的刷新频率)</p>
+<h2 id="接口和属性"><a href="#接口和属性" class="headerlink" title="接口和属性"></a>接口和属性</h2><h1 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h1><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ (CADisplayLink *)displayLinkWithTarget:(id)target selector:(SEL)sel;</span><br></pre></td></tr></table></figure>
 
 <p>生成一个display link 实例,制定target和调用方法,方法签名为<code>&#39;(void)selector:(CADisplayLink *)sender&#39;</code></p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (void)addToRunLoop:(NSRunLoop *)runloop forMode:(NSRunLoopMode)mode;</span><br></pre></td></tr></table></figure>
