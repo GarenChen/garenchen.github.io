@@ -1,5 +1,6 @@
 title: CADisplayLink简介
 toc: true
+thumbnail: 
 category: 软件开发
 tag: [iOS, CoreAnimation]
 
