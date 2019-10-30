@@ -7,23 +7,23 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>CADisplayLink简介 - Garen的开发笔记</title>
+<title>HTTP详细介绍 - Garen的开发笔记</title>
 
 
-    <meta name="description" content="CADisplayLink是与屏幕刷新频率相同的一个定时器,通常用来绘图,使自定义绘图的刷新频率和屏幕的刷新频率相同(60帧的刷新频率)">
-<meta name="keywords" content="iOS,CoreAnimation">
+    <meta name="description" content="超文本传输协议(HTTP),是一种用于客户端和服务端之间的应用层通信协议.其特点是简单快速、灵活.HTTP是一种无状态协议.HTTP协议不对请求和响应之间的通信状态进行保存,不保留一切请求和响应的信息">
+<meta name="keywords" content="TCP&#x2F;IP,HTTP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CADisplayLink简介">
-<meta property="og:url" content="https://garenchen.github.io/2019/09/19/CADisplayLink/index.html">
+<meta property="og:title" content="HTTP详细介绍">
+<meta property="og:url" content="https://garenchen.github.io/2019/10/30/http详细介绍/index.html">
 <meta property="og:site_name" content="Garen的开发笔记">
-<meta property="og:description" content="CADisplayLink是与屏幕刷新频率相同的一个定时器,通常用来绘图,使自定义绘图的刷新频率和屏幕的刷新频率相同(60帧的刷新频率)">
+<meta property="og:description" content="超文本传输协议(HTTP),是一种用于客户端和服务端之间的应用层通信协议.其特点是简单快速、灵活.HTTP是一种无状态协议.HTTP协议不对请求和响应之间的通信状态进行保存,不保留一切请求和响应的信息">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://garenchen.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-29T02:55:48.985Z">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572427490730&di=f014e48a5ddb0ec64d76567fe91c051c&imgtype=0&src=http%3A%2F%2Fuser-gold-cdn.xitu.io%2F2018%2F10%2F22%2F1669b18d26d8a1a2%3Fw%3D640%26h%3D480%26f%3Djpeg%26s%3D46869">
+<meta property="og:updated_time" content="2019-10-30T11:33:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CADisplayLink简介">
-<meta name="twitter:description" content="CADisplayLink是与屏幕刷新频率相同的一个定时器,通常用来绘图,使自定义绘图的刷新频率和屏幕的刷新频率相同(60帧的刷新频率)">
-<meta name="twitter:image" content="https://garenchen.github.io/images/og_image.png">
+<meta name="twitter:title" content="HTTP详细介绍">
+<meta name="twitter:description" content="超文本传输协议(HTTP),是一种用于客户端和服务端之间的应用层通信协议.其特点是简单快速、灵活.HTTP是一种无状态协议.HTTP协议不对请求和响应之间的通信状态进行保存,不保留一切请求和响应的信息">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572427490730&di=f014e48a5ddb0ec64d76567fe91c051c&imgtype=0&src=http%3A%2F%2Fuser-gold-cdn.xitu.io%2F2018%2F10%2F22%2F1669b18d26d8a1a2%3Fw%3D640%26h%3D480%26f%3Djpeg%26s%3D46869">
 
 
 
@@ -94,7 +94,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/avatar.jpg" alt="CADisplayLink简介" height="28">
+                <img src="/images/avatar.jpg" alt="HTTP详细介绍" height="28">
             
             </a>
         </div>
@@ -138,23 +138,27 @@
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main"><div class="card">
     
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1572427490730&amp;di=f014e48a5ddb0ec64d76567fe91c051c&amp;imgtype=0&amp;src=http%3A%2F%2Fuser-gold-cdn.xitu.io%2F2018%2F10%2F22%2F1669b18d26d8a1a2%3Fw%3D640%26h%3D480%26f%3Djpeg%26s%3D46869" alt="HTTP详细介绍">
+        </span>
+    </div>
+    
     <div class="card-content article ">
         <!-- <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <i class="fas fa-angle-double-right"></i>CADisplayLink简介
+                <i class="fas fa-angle-double-right"></i>HTTP详细介绍
             
         </h1> -->
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <!-- <time class="level-item has-text-grey" datetime="2019-09-19T12:27:04.452Z">2019-09-19</time> -->
-                <time class="level-item has-text-grey" datetime="2019-09-19T12:27:04.452Z"><i class="far fa-calendar-alt">&nbsp;</i>2019-09-19</time>
-                
-                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-10-29T02:55:48.985Z"><i class="far fa-calendar-check">&nbsp;</i>2019-10-29</time>
+                <!-- <time class="level-item has-text-grey" datetime="2019-10-30T11:33:40.000Z">2019-10-30</time> -->
+                <time class="level-item has-text-grey" datetime="2019-10-30T11:33:40.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2019-10-30</time>
                 
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/软件开发/">软件开发</a>
+                <a class="has-link-grey -link" href="/categories/网络/">网络</a>
                 </div>
                 
                 
@@ -164,47 +168,25 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                CADisplayLink简介
+                HTTP详细介绍
             
         </h1>
         <div class="content">
-            <p>CADisplayLink是与屏幕刷新频率相同的一个定时器,通常用来绘图,使自定义绘图的刷新频率和屏幕的刷新频率相同(60帧的刷新频率)</p>
+            <p>超文本传输协议(HTTP),是一种用于客户端和服务端之间的应用层通信协议.其特点是简单快速、灵活.HTTP是一种无状态协议.HTTP协议不对请求和响应之间的通信状态进行保存,不保留一切请求和响应的信息</p>
 <a id="more"></a>
 
-<h2 id="接口和属性"><a href="#接口和属性" class="headerlink" title="接口和属性"></a>接口和属性</h2><h4 id="1-接口"><a href="#1-接口" class="headerlink" title="1.接口"></a>1.接口</h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ (CADisplayLink *)displayLinkWithTarget:(id)target selector:(SEL)sel;</span><br></pre></td></tr></table></figure>
-
-<p>生成一个display link 实例,制定target和调用方法,方法签名为<code>&#39;(void)selector:(CADisplayLink *)sender&#39;</code></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (void)addToRunLoop:(NSRunLoop *)runloop forMode:(NSRunLoopMode)mode;</span><br></pre></td></tr></table></figure>
-
-<p>将display link 实例注册到一个runloop中</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (void)invalidate;</span><br></pre></td></tr></table></figure>
-
-<p>将display link从所有的runloop中移除,并释放</p>
-<h4 id="2-属性"><a href="#2-属性" class="headerlink" title="2.属性"></a>2.属性</h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@property(readonly, nonatomic) CFTimeInterval duration;</span><br></pre></td></tr></table></figure>
-
-<p>两次刷新之间的时间间隔</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@property(readonly, nonatomic) CFTimeInterval timestamp</span><br></pre></td></tr></table></figure>
-
-<p>当前帧的时间</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@property(readonly, nonatomic) CFTimeInterval targetTimestamp</span><br></pre></td></tr></table></figure>
-
-<p>下一帧渲染的时间</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@property(nonatomic) NSInteger preferredFramesPerSecond</span><br></pre></td></tr></table></figure>
-
-<p>首选每秒帧数,默认为0,会按照设备的每秒最大帧数刷新(60帧每秒),当需要比较慢的频率刷新时可以设置该属性</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@property(getter=isPaused, nonatomic) BOOL paused;</span><br></pre></td></tr></table></figure>
-
-<p>为true时,当前实例禁止触发,默认为false</p>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p><code>duration</code>属性返回的时间间隔是根据<code>maximumFramesPerSecond</code>属性得来的,如果要计算实际的时间间隔,用<code>timestamp - targetTimestamp</code>得出    </p>
-<p>当程序暂时不需要相应display link实例的事件回调时,可以通过将<code>pause</code>设置为false或true来暂停和启用display link实例        </p>
-<p>CADisplayLink不应该被子类化</p>
+<h2 id="HTTP报文"><a href="#HTTP报文" class="headerlink" title="HTTP报文"></a>HTTP报文</h2><blockquote>
+<p>用于HTTP协议交互的信息是一种由多行数据构成的字符串文本, 称为HTTP报文.请求端的HTTP报文叫做请求报文,响应端的叫做响应报文.</p>
+</blockquote>
+<h3 id="1-请求和响应信息的报文结构"><a href="#1-请求和响应信息的报文结构" class="headerlink" title="1.请求和响应信息的报文结构"></a>1.请求和响应信息的报文结构</h3><p> <img src="http://images0.cnblogs.com/blog/644616/201507/031831271286984.jpg" alt></p>
+<p> 请求和响应的信息都是由 头部 + 空行 + 实体的</p>
 
         </div>
         
             <ul class="post-copyright">
-            <li>原文链接：<a href="https://garenchen.github.io/2019/09/19/CADisplayLink/">https://garenchen.github.io/2019/09/19/CADisplayLink/</a></li>
-            <li>Garen 发布于：2019-09-19, 转载请注明出处</li>
-            <!-- <li>发布于：2019-09-19, 转载请注明出处</li> -->
+            <li>原文链接：<a href="https://garenchen.github.io/2019/10/30/http详细介绍/">https://garenchen.github.io/2019/10/30/http详细介绍/</a></li>
+            <li>Garen 发布于：2019-10-30, 转载请注明出处</li>
+            <!-- <li>发布于：2019-10-30, 转载请注明出处</li> -->
             </ul>
         
         
@@ -214,7 +196,7 @@
                 <div class="level-item">
                     <!-- <span class="is-size-6 has-text-grey has-mr-7">#</span> -->
                     <i class="fas fa-tags has-text-grey"></i>&nbsp;
-                    <a class="has-link-grey -link" href="/tags/CoreAnimation/">CoreAnimation</a>, <a class="has-link-grey -link" href="/tags/iOS/">iOS</a>
+                    <a class="has-link-grey -link" href="/tags/HTTP/">HTTP</a>, <a class="has-link-grey -link" href="/tags/TCP-IP/">TCP/IP</a>
                 </div>
             </div>
         </div>
@@ -252,13 +234,13 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/29/使用hexo在github上搭建个人博客/">
-                <i class="level-item fas fa-chevron-left"></i>
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/29/使用hexo在github上搭建个人博客/">
                 <span class="level-item">使用hexo在github上搭建个人博客</span>
+                <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
-        
         
     </div>
 </div>
@@ -371,22 +353,14 @@
                 目录
             </h3>
             <ul class="menu-list"><li>
-        <a class="is-flex" href="#接口和属性">
+        <a class="is-flex" href="#HTTP报文">
         <span class="has-mr-6">1</span>
-        <span>接口和属性</span>
+        <span>HTTP报文</span>
         </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#1-接口">
+        <a class="is-flex" href="#1-请求和响应信息的报文结构">
         <span class="has-mr-6">1.1</span>
-        <span>1.接口</span>
-        </a></li><li>
-        <a class="is-flex" href="#2-属性">
-        <span class="has-mr-6">1.2</span>
-        <span>2.属性</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#注意">
-        <span class="has-mr-6">2</span>
-        <span>注意</span>
-        </a></li></ul>
+        <span>1.请求和响应信息的报文结构</span>
+        </a></li></ul></li></ul>
         </div>
     </div>
 </div>
@@ -412,7 +386,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/avatar.jpg" alt="CADisplayLink简介" height="28">
+                    <img src="/images/avatar.jpg" alt="HTTP详细介绍" height="28">
                 
                 </a>
                 <p class="is-size-7">
